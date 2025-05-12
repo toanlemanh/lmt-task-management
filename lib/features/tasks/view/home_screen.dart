@@ -39,17 +39,10 @@ class HomeScreen extends StatelessWidget{
       appBar: AppBar(
         title: const Text('Tasks'),
         backgroundColor: Colors.deepPurple,
-        // leading: IconButton(
-        //   onPressed: onPressed,
-        //   icon: const Icon(
-        //     Icons.arrow_back,
-        //     color: Colors.grey,
-        //   ),
-        // ),
         actions: [ //trailing buttons
           IconButton(
             onPressed: () => context.go(AppRoutes.add.path),
-            icon: const Icon(Icons.add_task),
+            icon: const Icon(Icons.add_task, color: Colors.white,),
           ),
         ],
       ),
