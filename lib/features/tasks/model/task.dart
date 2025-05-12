@@ -10,8 +10,8 @@ class Task{
   String title = '';
   String detail = '';
   bool isDone = false; // completed or not
-  DateTime? estimateDate;
-  DateTime? startDate;
+  DateTime estimateDate;
+  DateTime startDate;
   DateTime? completeDate;
   String? imagePath;
 
@@ -19,5 +19,6 @@ class Task{
   final DateTime createDate;
   DateTime? updatedDate;
 
-  Task(this.taskId, this.isActive, this.createDate);
+  Task(this.taskId, this.title, this.detail,
+      this.createDate, this.startDate, this.estimateDate);
 }
