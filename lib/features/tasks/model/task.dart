@@ -15,7 +15,7 @@ class Task{
   DateTime? completeDate;
   String? imagePath;
 
-  bool isActive = false; // dated or outdated
+  bool isActive = true; // dated or outdated
   final DateTime createDate;
   DateTime? updatedDate;
 
