@@ -5,13 +5,16 @@ import 'package:go_router/go_router.dart';
 import '../../../core/widgets/task_form.dart';
 import '../model/task.dart';
 import '../service/task_service.dart';
+import '../viewmodel/task_list_store.dart';
 import '../viewmodel/task_store.dart';
-final task =
-  Task(1, 'eat breakfast', 'eat detail', DateTime.timestamp(), DateTime(2025,DateTime.december,1), DateTime(2025,DateTime.december,12) );
+// final task =
+//   Task.seed(1, 'eat breakfast', 'eat detail', DateTime.timestamp(), DateTime(2025,DateTime.december,1), DateTime(2025,DateTime.december,12) );
 
 class NewTaskScreen extends StatelessWidget{
 
   final taskViewModel = TaskStore(taskService: TaskService());
+
+  NewTaskScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +30,7 @@ class NewTaskScreen extends StatelessWidget{
           ),
         ),
       ),
-      body: task == null // length
-          ? const Center(child: Text('No tasks yet'))
-          : Padding(
+      body:  Padding(
             padding: const EdgeInsets.all(8.0),
             child: TaskForm(
                 // key: ValueKey(task.taskId.toString()),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../../features/tasks/model/task.dart';
+import '../../features/tasks/viewmodel/task_list_store.dart';
 import '../../features/tasks/viewmodel/task_store.dart';
 
 /**
@@ -18,6 +19,7 @@ class TaskItem extends StatelessWidget {
   final TaskStore viewmodel;
 
   void onToggleDone(){
+    // viewmodel.
     print("Toggle done");
   }
 
@@ -26,6 +28,7 @@ class TaskItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Observer(
       builder: (_) => Card(
+        color: model.isActive ? Colors.red : Colors.white70,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         elevation: 2,
